@@ -6,7 +6,8 @@ def close_neighbours(neuron, weight_matrix, min_weight):
     Returns a list of neighbours that have a connection strength above min_weight.
     """
     neighs = weight_matrix[neuron] #select connections to neighbours
-    cn = [abs(neighs) > min_weight] #select close neighbours
+    cn = [neighs > min_weight] #select close neighbours
+#    cn = [abs(neighs) > min_weight] #select close neighbours
     close_neuron_numbers = numpy.squeeze(numpy.arange(0, weight_matrix.shape[1]))[cn]
     return close_neuron_numbers
 
