@@ -53,3 +53,7 @@ def find_pattern_by_weight(neuron, weight_matrix, min_weight, max_length):
     list_of_paths_nodups = list(sorted_list_of_paths for sorted_list_of_paths,
                                         _ in itertools.groupby(sorted_list_of_paths))
     return list_of_paths, list_of_paths_nodups, dict_of_paths
+
+def find_pattern_by_synchrony(neuron, input_list, weight_matrix):
+	#Implement from jupyter
+	return pattern
