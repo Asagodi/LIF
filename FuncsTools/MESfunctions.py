@@ -56,7 +56,8 @@ def find_pattern_by_weight(neuron, weight_matrix, min_weight, max_length):
 
 def find_pattern_by_synchrony(inputs, weight_matrix):
 	#Implement from jupyter
-	outp = inputs.dot(weight_matrix)
-	syncplot = outp.mean(axis=1)
-	syncplot = syncplot.reshape(weight_matrix[1],weight_matrix[1])
+	#print(type(inputs), type(weight_matrix))
+																																																													outp = inputs.dot(weight_matrix)
+	syncplot = np.transpose(outp).dot(outp)
+	syncplot = syncplot.reshape(weight_matrix.shape[1],weight_matrix.shape[1])
 	return syncplot
